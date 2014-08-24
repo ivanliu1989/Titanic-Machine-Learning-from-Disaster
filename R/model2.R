@@ -1,4 +1,4 @@
-setwd("C:\\Users\\Ivan.Liuyanfeng\\Desktop\\Data_Mining_Work_Space\\Titanic-Machine-Learning-from-Disaster\\R")
+setwd(C:\\Documents and Settings\\Macro\\Desktop\\Ivandata\\Titanic-Machine-Learning-from-Disaster\\R)
 df.train <- read.csv('train.csv',header=T,stringsAsFactor=F)
 df.test <- read.csv('test.csv',header=T,stringsAsFactor=F)
 
@@ -22,7 +22,7 @@ barplot(table(df.train$Parch), main="Parch (parents + kids aboard)",
 hist(df.train$Fare, main="Fare (fee paid for ticket[s])", xlab = NULL, 
      col="darkgreen")
 barplot(table(df.train$Embarked), 
-        names.arg = c("Cherbourg", "Queenstown", "Southampton"),
+        names.arg = c("Unknown","Cherbourg", "Queenstown", "Southampton"),
         main="Embarked (port of embarkation)", col="sienna")
 
 mosaicplot(df.train$Pclass ~ df.train$Survived, 
