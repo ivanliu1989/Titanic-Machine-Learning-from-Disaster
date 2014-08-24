@@ -83,8 +83,8 @@ df.train$Age[which(df.train$Title=="Dr")]
 df.train$Age <- imputeMedian(df.train$Age, df.train$Title,titles.na.train)
 df.train$Age[which(df.train$Title=="Dr")]
 summary(df.train$Age)
-summary(df.train$Embarked)
-df.train$Embarked[which(is.na(df.train$Embarked))] <- 'S'
+table(df.train$Embarked)
+df.train$Embarked[which(df.train$Embarked=='')] <- 'S'
 summary(df.train$Fare)
 subset(df.train, Fare < 7)[order(subset(df.train, Fare < 7)$Fare, 
                                  subset(df.train, Fare < 7)$Pclass), 
